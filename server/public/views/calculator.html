@@ -1,0 +1,99 @@
+<main class="container-fluid">
+
+  <div class="row">
+    <div class="col-xs-0 col-md-2 calc"></div>
+    <div class="col-xs-12 col-md-4 calc">
+
+      <!-- Calculator -->
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xs-12 col-md-4 calc">
+            <h1 class="well well-lg">{{calc.title}}</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-md-4 calc">
+            <h1>{{calc.data.resultString}}</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.numberClick(1)" class="btn btn-primary btn-lg btn-block">1</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.numberClick(2)" class="btn btn-primary btn-lg btn-block">2</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.numberClick(3)" class="btn btn-primary btn-lg btn-block">3</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.math.divide()" class="btn btn-success btn-lg btn-block">÷</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.numberClick(4)" class="btn btn-primary btn-lg btn-block">4</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.numberClick(5)" class="btn btn-primary btn-lg btn-block">5</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.numberClick(6)" class="btn btn-primary btn-lg btn-block">6</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.math.multiply()" class="btn btn-success btn-lg btn-block">x</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.numberClick(7)" class="btn btn-primary btn-lg btn-block">7</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.numberClick(8)" class="btn btn-primary btn-lg btn-block">8</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.numberClick(9)" class="btn btn-primary btn-lg btn-block">9</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.math.subtract()" class="btn btn-success btn-lg btn-block">-</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.numberClick(0)" class="btn btn-primary btn-lg btn-block">0</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.numberClick('.')" class="btn btn-primary btn-lg btn-block">.</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.math.clear()" class="btn btn-primary btn-lg btn-block">C</button>
+          </div>
+          <div class="col-xs-3 col-md-1 calc">
+            <button type="button" ng-click="calc.math.add()" class="btn btn-success btn-lg btn-block">+</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-md-4 calc">
+            <button type="button" ng-click="calc.math.calc()" class="btn btn-danger btn-lg btn-block">=</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Last 10 calculations -->
+    <div class="col-xs-12 col-md-4 calc">
+      <h1 class="well well-lg">{{calc.title2}}</h1>
+      <h3 ng-repeat="calculation in calc.results.resultArray track by $index"><span class="label label-warning">{{$index + 1}}</span> {{calculation}}</h3>
+    </div>
+    <div class="col-xs-0 col-md-2 calc"></div>
+  </div>
+
+</main>

@@ -1,0 +1,27 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "author": "Eric Anderson",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.13",
+    "path": "^0.12.7",
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
